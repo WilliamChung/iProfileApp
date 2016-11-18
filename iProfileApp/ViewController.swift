@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var qButton: UIButton!
     @IBOutlet weak var wButton: UIButton!
     @IBOutlet weak var eButton: UIButton!
@@ -21,6 +22,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var oButton: UIButton!
     @IBOutlet weak var pButton: UIButton!
     
+    @IBOutlet weak var aButton: UIButton!
+    @IBOutlet weak var sButton: UIButton!
+    @IBOutlet weak var dButton: UIButton!
+    @IBOutlet weak var fButton: UIButton!
+    @IBOutlet weak var gButton: UIButton!
+    @IBOutlet weak var hButton: UIButton!
+    @IBOutlet weak var jButton: UIButton!
+    @IBOutlet weak var kButton: UIButton!
+    @IBOutlet weak var lButton: UIButton!
+    
+    @IBOutlet weak var shiftButton: UIButton!
+    
+    @IBOutlet weak var zButton: UIButton!
+    @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var cButton: UIButton!
+    @IBOutlet weak var vButton: UIButton!
+    @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var nButton: UIButton!
+    @IBOutlet weak var mButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var numbersButton: UIButton!
+    
+    @IBOutlet weak var spaceButton: UIButton!
+    
+    @IBOutlet weak var returnButton: UIButton!
+    
+ 
     var tStamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
