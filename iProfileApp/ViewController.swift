@@ -76,7 +76,34 @@ class ViewController: UIViewController {
         oButton.layer.cornerRadius = 5
         pButton.layer.cornerRadius = 5
         
+        aButton.layer.cornerRadius = 5
+        sButton.layer.cornerRadius = 5
+        dButton.layer.cornerRadius = 5
+        fButton.layer.cornerRadius = 5
+        gButton.layer.cornerRadius = 5
+        hButton.layer.cornerRadius = 5
+        jButton.layer.cornerRadius = 5
+        kButton.layer.cornerRadius = 5
+        lButton.layer.cornerRadius = 5
+        
+        shiftButton.layer.cornerRadius = 5
+        
+        zButton.layer.cornerRadius = 5
+        xButton.layer.cornerRadius = 5
+        cButton.layer.cornerRadius = 5
+        vButton.layer.cornerRadius = 5
+        bButton.layer.cornerRadius = 5
+        nButton.layer.cornerRadius = 5
+        mButton.layer.cornerRadius = 5
+        
+        deleteButton.layer.cornerRadius = 5
+        
+        numbersButton.layer.cornerRadius = 5
+        
+        spaceButton.layer.cornerRadius = 5
     
+        returnButton.layer.cornerRadius = 5
+
     }
     
     @IBAction func push(_ sender: UIButton) {
