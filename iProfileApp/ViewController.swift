@@ -50,6 +50,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var returnButton: UIButton!
     
+    @IBOutlet weak var keyTextField: UITextField!
  
     var tStamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
@@ -61,6 +62,9 @@ class ViewController: UIViewController {
     var downTimeDifference: Double = 0
     var upTimeDifference: Double = 0
     var shiftClicked: Bool = false
+    var specialNumClicked: Bool = false
+    
+    var keyString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +110,145 @@ class ViewController: UIViewController {
 
     }
     
+    
+    @IBAction func deletePushed(_ sender: UIButton) {
+        keyString = keyString.substring(to: keyString.index(before: keyString.endIndex))
+        keyTextField.text = keyString
+    }
+    
+    @IBAction func spacePushed(_ sender: UIButton) {
+        keyString += " "
+        keyTextField.text = keyString
+    }
+    
+    
+    @IBAction func shiftPushed(_ sender: UIButton) {
+        
+        if(shiftClicked == false){
+            qButton.setTitle("Q", for: .normal)
+            wButton.setTitle("W", for: .normal)
+            eButton.setTitle("E", for: .normal)
+            rButton.setTitle("R", for: .normal)
+            tButton.setTitle("T", for: .normal)
+            yButton.setTitle("Y", for: .normal)
+            uButton.setTitle("U", for: .normal)
+            iButton.setTitle("I", for: .normal)
+            oButton.setTitle("O", for: .normal)
+            pButton.setTitle("P", for: .normal)
+            aButton.setTitle("A", for: .normal)
+            sButton.setTitle("S", for: .normal)
+            dButton.setTitle("D", for: .normal)
+            fButton.setTitle("F", for: .normal)
+            gButton.setTitle("G", for: .normal)
+            hButton.setTitle("H", for: .normal)
+            jButton.setTitle("J", for: .normal)
+            kButton.setTitle("K", for: .normal)
+            lButton.setTitle("L", for: .normal)
+            zButton.setTitle("Z", for: .normal)
+            xButton.setTitle("X", for: .normal)
+            cButton.setTitle("C", for: .normal)
+            vButton.setTitle("V", for: .normal)
+            bButton.setTitle("B", for: .normal)
+            nButton.setTitle("N", for: .normal)
+            mButton.setTitle("M", for: .normal)
+            
+            shiftClicked = true
+        }
+        else {
+            qButton.setTitle("q", for: .normal)
+            wButton.setTitle("w", for: .normal)
+            eButton.setTitle("e", for: .normal)
+            rButton.setTitle("r", for: .normal)
+            tButton.setTitle("t", for: .normal)
+            yButton.setTitle("y", for: .normal)
+            uButton.setTitle("u", for: .normal)
+            iButton.setTitle("i", for: .normal)
+            oButton.setTitle("o", for: .normal)
+            pButton.setTitle("p", for: .normal)
+            aButton.setTitle("a", for: .normal)
+            sButton.setTitle("s", for: .normal)
+            dButton.setTitle("d", for: .normal)
+            fButton.setTitle("f", for: .normal)
+            gButton.setTitle("g", for: .normal)
+            hButton.setTitle("h", for: .normal)
+            jButton.setTitle("j", for: .normal)
+            kButton.setTitle("k", for: .normal)
+            lButton.setTitle("l", for: .normal)
+            zButton.setTitle("z", for: .normal)
+            xButton.setTitle("x", for: .normal)
+            cButton.setTitle("c", for: .normal)
+            vButton.setTitle("v", for: .normal)
+            bButton.setTitle("b", for: .normal)
+            nButton.setTitle("n", for: .normal)
+            mButton.setTitle("m", for: .normal)
+            
+            shiftClicked = false
+        }
+    }
+    
+    @IBAction func specialNumPushed(_ sender: UIButton) {
+        if(specialNumClicked == false){
+            qButton.setTitle("1", for: .normal)
+            wButton.setTitle("2", for: .normal)
+            eButton.setTitle("3", for: .normal)
+            rButton.setTitle("4", for: .normal)
+            tButton.setTitle("5", for: .normal)
+            yButton.setTitle("6", for: .normal)
+            uButton.setTitle("7", for: .normal)
+            iButton.setTitle("8", for: .normal)
+            oButton.setTitle("9", for: .normal)
+            pButton.setTitle("0", for: .normal)
+            aButton.setTitle("-", for: .normal)
+            sButton.setTitle("/", for: .normal)
+            dButton.setTitle(":", for: .normal)
+            fButton.setTitle(";", for: .normal)
+            gButton.setTitle("(", for: .normal)
+            hButton.setTitle(")", for: .normal)
+            jButton.setTitle("$", for: .normal)
+            kButton.setTitle("&", for: .normal)
+            lButton.setTitle("@", for: .normal)
+            zButton.setTitle(".", for: .normal)
+            xButton.setTitle(",", for: .normal)
+            cButton.setTitle("?", for: .normal)
+            vButton.setTitle("!", for: .normal)
+            bButton.setTitle("'", for: .normal)
+            nButton.setTitle("\"", for: .normal)
+            mButton.setTitle("\\", for: .normal)
+            
+            specialNumClicked = true
+        }
+        else {
+            qButton.setTitle("q", for: .normal)
+            wButton.setTitle("w", for: .normal)
+            eButton.setTitle("e", for: .normal)
+            rButton.setTitle("r", for: .normal)
+            tButton.setTitle("t", for: .normal)
+            yButton.setTitle("y", for: .normal)
+            uButton.setTitle("u", for: .normal)
+            iButton.setTitle("i", for: .normal)
+            oButton.setTitle("o", for: .normal)
+            pButton.setTitle("p", for: .normal)
+            aButton.setTitle("a", for: .normal)
+            sButton.setTitle("s", for: .normal)
+            dButton.setTitle("d", for: .normal)
+            fButton.setTitle("f", for: .normal)
+            gButton.setTitle("g", for: .normal)
+            hButton.setTitle("h", for: .normal)
+            jButton.setTitle("j", for: .normal)
+            kButton.setTitle("k", for: .normal)
+            lButton.setTitle("l", for: .normal)
+            zButton.setTitle("z", for: .normal)
+            xButton.setTitle("x", for: .normal)
+            cButton.setTitle("c", for: .normal)
+            vButton.setTitle("v", for: .normal)
+            bButton.setTitle("b", for: .normal)
+            nButton.setTitle("n", for: .normal)
+            mButton.setTitle("m", for: .normal)
+            
+            specialNumClicked = false
+        }
+    }
+    
     @IBAction func push(_ sender: UIButton) {
         
         oldDownTime = currentDownTime
@@ -116,6 +259,48 @@ class ViewController: UIViewController {
         print(oldDownTime)
         print(currentDownTime)
         print(downTimeDifference)
+        
+        if(shiftClicked == true) {
+            keyString += sender.currentTitle!
+            keyTextField.text = keyString
+            
+            qButton.setTitle("q", for: .normal)
+            wButton.setTitle("w", for: .normal)
+            eButton.setTitle("e", for: .normal)
+            rButton.setTitle("r", for: .normal)
+            tButton.setTitle("t", for: .normal)
+            yButton.setTitle("y", for: .normal)
+            uButton.setTitle("u", for: .normal)
+            iButton.setTitle("i", for: .normal)
+            oButton.setTitle("o", for: .normal)
+            pButton.setTitle("p", for: .normal)
+            aButton.setTitle("a", for: .normal)
+            sButton.setTitle("s", for: .normal)
+            dButton.setTitle("d", for: .normal)
+            fButton.setTitle("f", for: .normal)
+            gButton.setTitle("g", for: .normal)
+            hButton.setTitle("h", for: .normal)
+            jButton.setTitle("j", for: .normal)
+            kButton.setTitle("k", for: .normal)
+            lButton.setTitle("l", for: .normal)
+            zButton.setTitle("z", for: .normal)
+            xButton.setTitle("x", for: .normal)
+            cButton.setTitle("c", for: .normal)
+            vButton.setTitle("v", for: .normal)
+            bButton.setTitle("b", for: .normal)
+            nButton.setTitle("n", for: .normal)
+            mButton.setTitle("m", for: .normal)
+            
+            shiftClicked = false
+            
+        }
+        else {
+            keyString += sender.currentTitle!
+            keyTextField.text = keyString
+        }
+    
+        
+        
         
         //downDownTime.text = String (downTimeDifference)
         //timeStamp.text = String (tStamp)

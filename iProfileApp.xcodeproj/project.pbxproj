@@ -518,6 +518,7 @@
 				3D0E60271DDC035600681580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D0E60281DDC035600681580 /* Build configuration list for PBXNativeTarget "iProfileAppTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				3D0E602A1DDC035600681580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D0E602B1DDC035600681580 /* Build configuration list for PBXNativeTarget "iProfileAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				3D0E602D1DDC035600681580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
