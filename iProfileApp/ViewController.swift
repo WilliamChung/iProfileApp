@@ -54,6 +54,8 @@ class ViewController: UIViewController {
  
     @IBOutlet weak var timeStampField: UITextField!
     
+    @IBOutlet weak var locationTextField: UITextField!
+    
     var tStamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
@@ -65,8 +67,34 @@ class ViewController: UIViewController {
     var upTimeDifference: Double = 0
     var shiftClicked: Bool = false
     var specialNumClicked: Bool = false
+    var specialTwoVisible: Bool = false
     
     var keyString: String = ""
+    
+    var location: CGPoint?
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if let touch = touches.first {
+            let position: CGPoint = touch.location(in: view)
+            print(position.x)
+            print(position.y)
+            
+            let locX: CGFloat = position.x
+            let locY: CGFloat = position.y
+            
+            let x = String (stringInterpolationSegment:locX)
+            let y = String (stringInterpolationSegment:locY)
+            
+            locationTextField.text = "X: " + x + ", Y: " + y
+            
+
+        }
+        
+        super.touchesBegan(touches , with: event)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +156,38 @@ class ViewController: UIViewController {
     
     
     @IBAction func shiftPushed(_ sender: UIButton) {
-        
+        /*
+        if(specialTwoVisible == true) {
+            qButton.setTitle("[", for: .normal)
+            wButton.setTitle("]", for: .normal)
+            eButton.setTitle("{", for: .normal)
+            rButton.setTitle("}", for: .normal)
+            tButton.setTitle("#", for: .normal)
+            yButton.setTitle("%", for: .normal)
+            uButton.setTitle("^", for: .normal)
+            iButton.setTitle("*", for: .normal)
+            oButton.setTitle("+", for: .normal)
+            pButton.setTitle("=", for: .normal)
+            aButton.setTitle("_", for: .normal)
+            sButton.setTitle("\\", for: .normal)
+            dButton.setTitle("\u{00601C}", for: .normal)
+            fButton.setTitle("~", for: .normal)
+            gButton.setTitle("<", for: .normal)
+            hButton.setTitle(">", for: .normal)
+            jButton.setTitle("\u{008000}", for: .normal)
+            kButton.setTitle("\u{00A003}", for: .normal)
+            lButton.setTitle("\u{00A005}", for: .normal)
+            zButton.setTitle("-", for: .normal)
+            xButton.setTitle(".", for: .normal)
+            cButton.setTitle(",", for: .normal)
+            vButton.setTitle("?", for: .normal)
+            bButton.setTitle("!", for: .normal)
+            nButton.setTitle("'", for: .normal)
+            mButton.setTitle("\"", for: .normal)
+            
+        }
+ */
+
         if(shiftClicked == false){
             qButton.setTitle("Q", for: .normal)
             wButton.setTitle("W", for: .normal)
@@ -219,8 +278,11 @@ class ViewController: UIViewController {
             bButton.setTitle("'", for: .normal)
             nButton.setTitle("\"", for: .normal)
             mButton.setTitle("\\", for: .normal)
+            shiftButton.setTitle("#+=", for: .normal)
+            numbersButton.setTitle("ABC", for: .normal)
             
             specialNumClicked = true
+            specialTwoVisible = true
         }
         else {
             qButton.setTitle("q", for: .normal)
@@ -249,8 +311,11 @@ class ViewController: UIViewController {
             bButton.setTitle("b", for: .normal)
             nButton.setTitle("n", for: .normal)
             mButton.setTitle("m", for: .normal)
+            shiftButton.setTitle("^", for: .normal)
+            numbersButton.setTitle("123", for: .normal)
             
             specialNumClicked = false
+            specialTwoVisible = false
         }
     }
     
