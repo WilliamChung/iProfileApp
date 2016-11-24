@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,27 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".tie5Roanl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zam-qa-dKD">
-                                <rect key="frame" x="132" y="194" width="110.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LO3-CD-kQQ">
-                                <rect key="frame" x="92" y="232" width="190" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="LO3-CD-kQQ" secondAttribute="height" multiplier="19:3" id="RvM-xg-TgR"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga2-EU-t7j">
-                                <rect key="frame" x="145" y="330.5" width="85.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-uY-Lit">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
                                 <subviews>
@@ -261,6 +240,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
+                                                                            <action selector="lButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU8-nb-AD7"/>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZK-vB-ldE"/>
                                                                         </connections>
                                                                     </button>
@@ -470,15 +450,6 @@
                                     <constraint firstAttribute="height" constant="216" id="vJi-iV-vyC"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGF-fd-YjU">
-                                <rect key="frame" x="92.5" y="359" width="190" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IGF-fd-YjU" secondAttribute="height" multiplier="19:3" id="1R0-Xv-nbG"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-ta-CZU">
                                 <rect key="frame" x="125" y="413" width="124" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.95590481940000005" blue="0.79457018089999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -486,22 +457,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".tie5Roanl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zam-qa-dKD">
+                                <rect key="frame" x="132" y="139" width="111" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LO3-CD-kQQ">
+                                <rect key="frame" x="92" y="177" width="190" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga2-EU-t7j">
+                                <rect key="frame" x="145" y="275" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGF-fd-YjU">
+                                <rect key="frame" x="92" y="304" width="190" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95590481938005278" blue="0.79457018091889453" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zam-qa-dKD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Bv-d9-JLm"/>
-                            <constraint firstItem="IGF-fd-YjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Fb-68-NGj"/>
-                            <constraint firstItem="IGF-fd-YjU" firstAttribute="top" secondItem="Ga2-EU-t7j" secondAttribute="bottom" constant="8" id="2I7-YJ-nKI"/>
-                            <constraint firstItem="Ga2-EU-t7j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Tv-7Q-XAA"/>
-                            <constraint firstItem="BxZ-uY-Lit" firstAttribute="top" secondItem="IGF-fd-YjU" secondAttribute="bottom" constant="62" id="AuA-ez-yNM"/>
+                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="trailing" secondItem="IGF-fd-YjU" secondAttribute="trailing" id="4LR-XP-m9O"/>
                             <constraint firstItem="BxZ-uY-Lit" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fct-mh-I4g"/>
+                            <constraint firstItem="zam-qa-dKD" firstAttribute="centerX" secondItem="LO3-CD-kQQ" secondAttribute="centerX" id="GqY-s2-hQx"/>
                             <constraint firstAttribute="trailing" secondItem="BxZ-uY-Lit" secondAttribute="trailing" id="HX6-uI-D05"/>
-                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J7T-x7-Jh6"/>
+                            <constraint firstItem="zam-qa-dKD" firstAttribute="centerX" secondItem="Ga2-EU-t7j" secondAttribute="centerX" id="IyW-de-mTr"/>
+                            <constraint firstItem="Ga2-EU-t7j" firstAttribute="top" secondItem="LO3-CD-kQQ" secondAttribute="bottom" constant="68" id="KsA-wg-yGb"/>
+                            <constraint firstItem="cEp-ta-CZU" firstAttribute="top" secondItem="IGF-fd-YjU" secondAttribute="bottom" constant="79" id="LUE-fT-1ct"/>
+                            <constraint firstItem="IGF-fd-YjU" firstAttribute="top" secondItem="Ga2-EU-t7j" secondAttribute="bottom" constant="8" symbolic="YES" id="MYu-jW-Xu6"/>
+                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="leading" secondItem="IGF-fd-YjU" secondAttribute="leading" id="Tz6-F8-D8j"/>
                             <constraint firstItem="cEp-ta-CZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WyY-AB-ihR"/>
-                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="top" secondItem="zam-qa-dKD" secondAttribute="bottom" constant="8" id="dXI-gf-wyi"/>
+                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="76" id="b7O-0l-hkx"/>
                             <constraint firstItem="BxZ-uY-Lit" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="e2k-sZ-Brq"/>
-                            <constraint firstItem="Ga2-EU-t7j" firstAttribute="top" secondItem="LO3-CD-kQQ" secondAttribute="bottom" constant="68.5" id="gFF-KA-AaL"/>
-                            <constraint firstItem="cEp-ta-CZU" firstAttribute="top" secondItem="IGF-fd-YjU" secondAttribute="bottom" constant="24" id="haF-4Q-WpI"/>
+                            <constraint firstItem="zam-qa-dKD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="iaK-Ux-dgr"/>
+                            <constraint firstItem="IGF-fd-YjU" firstAttribute="centerX" secondItem="cEp-ta-CZU" secondAttribute="centerX" id="rYv-g1-NgY"/>
+                            <constraint firstItem="LO3-CD-kQQ" firstAttribute="top" secondItem="zam-qa-dKD" secondAttribute="bottom" constant="8" symbolic="YES" id="zxb-if-iY2"/>
                         </constraints>
                     </view>
                     <connections>
