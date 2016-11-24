@@ -52,6 +52,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var keyTextField: UITextField!
  
+    @IBOutlet weak var timeStampField: UITextField!
+    
     var tStamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
@@ -112,8 +114,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func deletePushed(_ sender: UIButton) {
-        keyString = keyString.substring(to: keyString.index(before: keyString.endIndex))
-        keyTextField.text = keyString
+        if(keyString == "") {} //remove only if there is something there
+        else {
+            keyString = keyString.substring(to: keyString.index(before: keyString.endIndex))
+            keyTextField.text = keyString
+        }
     }
     
     @IBAction func spacePushed(_ sender: UIButton) {
@@ -303,7 +308,7 @@ class ViewController: UIViewController {
         
         
         //downDownTime.text = String (downTimeDifference)
-        //timeStamp.text = String (tStamp)
+        timeStampField.text = String (tStamp)
         
     }
     
