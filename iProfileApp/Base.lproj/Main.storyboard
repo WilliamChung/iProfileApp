@@ -45,6 +45,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WoI-4v-yNt"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuJ-1g-4QD"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V66-st-BC3">
@@ -55,6 +56,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzb-gX-9CA"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEU-Gw-v1a"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-qF-A9J">
@@ -65,6 +67,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nis-Ae-91K"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TA9-kr-q28"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTF-6j-WCA">
@@ -75,6 +78,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hO-YB-NPc"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NeA-Z5-kvN"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-It-Xr1">
@@ -85,6 +89,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4c-t4-A01"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D58-QI-ZHu"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-9W-uKv">
@@ -95,6 +100,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ2-iM-Xfh"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AjN-Ix-zc1"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR1-Bq-17d">
@@ -105,6 +111,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q32-OO-QFr"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjR-vB-QBs"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jE-sG-DsJ">
@@ -115,6 +122,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEu-EA-M5i"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZX-ft-lF7"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0N-Bv-UI4">
@@ -125,6 +133,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gS-vn-LXv"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9Q-Ii-o0n"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-za-CcV">
@@ -135,6 +144,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sae-1G-XW6"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqY-5b-Log"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -161,6 +171,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SnN-Zk-jpB"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNb-iQ-7lL"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD7-yx-Aw1">
@@ -171,6 +182,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ro4-qj-ew4"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTb-HP-LvN"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M86-aR-iYn">
@@ -181,6 +193,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8e-xM-l50"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pum-0m-buH"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih4-6t-V2X">
@@ -191,6 +204,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2Q-zb-qKh"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQv-H2-n9B"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuH-ye-VlZ">
@@ -201,6 +215,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWk-qO-4FM"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cC-WZ-hQs"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co9-L4-neQ">
@@ -211,6 +226,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Nr-tg-Mgn"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x49-6B-D27"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jJ-et-8Qu">
@@ -221,6 +237,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHI-Sm-gCb"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L88-Ma-P6P"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjZ-rt-xY6">
@@ -231,6 +248,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BOA-ZY-2di"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vc6-Io-YOx"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFH-MZ-yu1">
@@ -242,6 +260,7 @@
                                                                         <connections>
                                                                             <action selector="lButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU8-nb-AD7"/>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZK-vB-ldE"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3w7-fq-waz"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -284,6 +303,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHU-Xu-gc3"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Yz-38-sek"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQJ-Gu-ZbO">
@@ -294,6 +314,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47X-Dg-7vF"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3D-Mr-vL9"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbd-uW-9pe">
@@ -304,6 +325,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhT-s6-I2P"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qkh-aB-1pJ"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfW-ee-YKQ">
@@ -314,6 +336,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7Z-yg-6Mt"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWU-xC-s7z"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33c-fb-VBA">
@@ -324,6 +347,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pb2-7N-j2w"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Njm-WT-LJh"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR4-7M-TAp">
@@ -334,6 +358,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnx-cc-GAc"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sig-7Z-XIy"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXX-V8-uLZ">
@@ -344,6 +369,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Nn-9j-VqN"/>
+                                                                            <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DxE-rS-NgB"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

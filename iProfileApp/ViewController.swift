@@ -73,6 +73,9 @@ class ViewController: UIViewController {
     var upTime: Double = 0
     var downTimeDifference: Double = 0
     var upTimeDifference: Double = 0
+    var upDownTime: Double = 0
+    var meanHoldTime: Double = 0
+    
     var shiftVisible: Bool = true
     var shiftClicked: Bool = false
     var specialNumVisible: Bool = true
@@ -367,7 +370,7 @@ class ViewController: UIViewController {
             bButton.setTitle("b", for: .normal)
             nButton.setTitle("n", for: .normal)
             mButton.setTitle("m", for: .normal)
-            shiftButton.setTitle("^", for: .normal)
+            shiftButton.setTitle("\u{21e7}", for: .normal)
             numbersButton.setTitle("123", for: .normal)
             
             specialNumVisible = true
