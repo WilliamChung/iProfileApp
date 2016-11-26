@@ -22,6 +22,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M3-EX-n3X">
+                                <rect key="frame" x="16" y="20" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-GZ-xfO">
+                                <rect key="frame" x="108" y="15" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-uY-Lit">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
                                 <subviews>
@@ -451,6 +465,9 @@
                                                                         <state key="normal" title="return">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="submitToForm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSX-bY-pY0"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
@@ -557,6 +574,7 @@
                         <outlet property="tButton" destination="j5h-It-Xr1" id="bnh-T7-4he"/>
                         <outlet property="timeStampField" destination="IGF-fd-YjU" id="3KU-kq-mDf"/>
                         <outlet property="uButton" destination="sR1-Bq-17d" id="j3H-r6-QWz"/>
+                        <outlet property="usernameTextField" destination="vtT-GZ-xfO" id="YP0-9Z-KRR"/>
                         <outlet property="vButton" destination="lfW-ee-YKQ" id="ARt-GK-yYW"/>
                         <outlet property="wButton" destination="V66-st-BC3" id="QW3-AE-bdb"/>
                         <outlet property="xButton" destination="dQJ-Gu-ZbO" id="dkz-uL-dSy"/>

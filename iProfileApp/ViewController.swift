@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -449,6 +450,33 @@ class ViewController: UIViewController {
         
         
         //downUpTime.text = String (upTimeDifference)
+    }
+    
+    
+    @IBAction func submitToForm(_ sender: UIButton) {
+        
+        do {
+            // Save data to file
+            let fileName = "data"
+            let docDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            if let fileURL = docDirectory?.appendingPathComponent(fileName).appendingPathExtension("txt") {
+                
+                // Write to a file on disk
+                
+                //need to seek to end of file and then write
+                
+                let outString = "Write this text to the file"
+                do {
+                    try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+                    print("Saved to: \(fileURL)")
+                }
+                
+                catch {
+                    print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+                }
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
