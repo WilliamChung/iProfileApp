@@ -87,6 +87,86 @@ class ViewController: UIViewController {
     
     var location: CGPoint?
     
+    var holdtime1   = 0
+    var holdtime2   = 0
+    var holdtime3   = 0
+    var holdtime4   = 0
+    var holdtime5   = 0
+    var holdtime6   = 0
+    var holdtime7   = 0
+    var holdtime8   = 0
+    var holdtime9   = 0
+    var holdtime10  = 0
+    var holdtime11  = 0
+    var holdtime12  = 0
+    var holdtime13  = 0
+    var holdtime14  = 0
+    
+    var downdown1   = 0
+    var downdown2   = 0
+    var downdown3   = 0
+    var downdown4   = 0
+    var downdown5   = 0
+    var downdown6   = 0
+    var downdown7   = 0
+    var downdown8   = 0
+    var downdown9   = 0
+    var downdown10   = 0
+    var downdown11   = 0
+    var downdown12   = 0
+    var downdown13   = 0
+    
+    var updown1   = 0
+    var updown2   = 0
+    var updown3   = 0
+    var updown4   = 0
+    var updown5   = 0
+    var updown6   = 0
+    var updown7   = 0
+    var updown8   = 0
+    var updown9   = 0
+    var updown10   = 0
+    var updown11   = 0
+    var updown12   = 0
+    var updown13   = 0
+    
+    var pressure1   = 0
+    var pressure2   = 0
+    var pressure3   = 0
+    var pressure4   = 0
+    var pressure5   = 0
+    var pressure6   = 0
+    var pressure7   = 0
+    var pressure8   = 0
+    var pressure9   = 0
+    var pressure10   = 0
+    var pressure11   = 0
+    var pressure12   = 0
+    var pressure13   = 0
+    var pressure14   = 0
+    
+    var fingerarea1   = 0
+    var fingerarea2   = 0
+    var fingerarea3   = 0
+    var fingerarea4   = 0
+    var fingerarea5   = 0
+    var fingerarea6   = 0
+    var fingerarea7   = 0
+    var fingerarea8   = 0
+    var fingerarea9   = 0
+    var fingerarea10   = 0
+    var fingerarea11   = 0
+    var fingerarea12   = 0
+    var fingerarea13   = 0
+    var fingerarea14   = 0
+    
+    var meanholdtime  = 0
+    var meanpressure  = 0
+    var meanfingerarea  = 0
+    var user_id = 0
+    
+    var dataArray: [Int] = []
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -387,9 +467,9 @@ class ViewController: UIViewController {
         
         downTimeDifference = currentDownTime - oldDownTime
         
-        print(oldDownTime)
-        print(currentDownTime)
-        print(downTimeDifference)
+        print("OldDown: \(oldDownTime)")
+        print("CurrentDown: \(currentDownTime)")
+        print("DownDifference: \(downTimeDifference)")
         
         if(shiftClicked == true) {
             keyString += sender.currentTitle!
@@ -445,8 +525,8 @@ class ViewController: UIViewController {
         upTime = Double (tStamp)!
         upTimeDifference = upTime - currentDownTime
         
-        print(upTime)
-        print(upTimeDifference)
+        print("UpTime: \(upTime)")
+        print("UpTimeDiff: \(upTimeDifference)")
         
         
         //downUpTime.text = String (upTimeDifference)
@@ -461,6 +541,7 @@ class ViewController: UIViewController {
         if let outputStream = OutputStream(url: fileURL, append: true) {
             outputStream.open()
             let text = "write this\n"
+            print("Saved to: \(fileURL)")
             let bytesWritten = outputStream.write(text)
             if bytesWritten < 0 { print("write failure") }
             outputStream.close()
