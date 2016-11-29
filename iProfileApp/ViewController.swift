@@ -460,7 +460,7 @@ class ViewController: UIViewController {
         
         if let outputStream = OutputStream(url: fileURL, append: true) {
             outputStream.open()
-            let text = "some text\n"
+            let text = "write this\n"
             let bytesWritten = outputStream.write(text)
             if bytesWritten < 0 { print("write failure") }
             outputStream.close()
@@ -497,7 +497,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
+
     extension OutputStream {
         
         /// Write `String` to `OutputStream`
@@ -536,5 +537,5 @@ class ViewController: UIViewController {
         
     }
 
-}
+
 
