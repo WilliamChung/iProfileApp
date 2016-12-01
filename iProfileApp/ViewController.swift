@@ -675,7 +675,7 @@ class ViewController: UIViewController {
             }
         }
         else {
-            let alertController = UIAlertController(title: "Correct!", message: "Submittted.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Correct!", message: "Submitted.", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
