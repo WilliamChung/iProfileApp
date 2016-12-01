@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var toPass: String!
     
     @IBOutlet weak var qButton: UIButton!
     @IBOutlet weak var wButton: UIButton!
@@ -43,13 +44,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mButton: UIButton!
     
     @IBAction func lButton(_ sender: UIButton) {
-        
-        
-        
-        
     }
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var labelPassedData: UILabel!
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -163,9 +160,21 @@ class ViewController: UIViewController {
     var meanholdtime  = 0
     var meanpressure  = 0
     var meanfingerarea  = 0
-    var user_id = 0
+    var user_id = ""
     
     var dataArray: [Int] = []
+    
+    enum UIAlertControllerStyle : Int {
+        case ActionSheet
+        case Alert
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        labelPassedData.text = toPass
+        
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -535,48 +544,150 @@ class ViewController: UIViewController {
     
     @IBAction func submitToForm(_ sender: UIButton) {
         
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("data.txt")
-        
-        if let outputStream = OutputStream(url: fileURL, append: true) {
-            outputStream.open()
-            let text = "write this\n"
-            print("Saved to: \(fileURL)")
-            let bytesWritten = outputStream.write(text)
-            if bytesWritten < 0 { print("write failure") }
-            outputStream.close()
-        } else {
-            print("Unable to open file")
-        }
-    /*
-        do {
-            // Save data to file
-            let fileName = "data"
-            let docDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            if let fileURL = docDirectory?.appendingPathComponent(fileName).appendingPathExtension("txt") {
-                
-                // Write to a file on disk
-                
-                //need to seek to end of file and then write
-                
-                let outString = "Write this text to the file"
-                do {
-                    try outString.write(to: fileURL, atomically: true, encoding: .utf8)
-                    print("Saved to: \(fileURL)")
-                }
-                
-                catch {
-                    print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-                }
-            }
+        if(keyTextField.text == ".tie5Roanl") {
+            let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                .appendingPathComponent("data.txt")
             
+            if let outputStream = OutputStream(url: fileURL, append: true) {
+                outputStream.open()
+                let text = "write this\n"
+                print("Saved to: \(fileURL)")
+                let bytesWritten = outputStream.write(text)
+                
+                if bytesWritten < 0 {
+                    print("write failure")
+                }
+                outputStream.close()
+                showAlert(correct: true)
+                keyTextField.text = ""
+            }
+                
+            else {
+                print("Unable to open file")
+            }
         }
-    */
+        
+        else {
+            showAlert(correct: false);
+            keyTextField.text = ""
+            
+            //reset all values
+            holdtime1   = 0
+            holdtime2   = 0
+            holdtime3   = 0
+            holdtime4   = 0
+            holdtime5   = 0
+            holdtime6   = 0
+            holdtime7   = 0
+            holdtime8   = 0
+            holdtime9   = 0
+            holdtime10  = 0
+            holdtime11  = 0
+            holdtime12  = 0
+            holdtime13  = 0
+            holdtime14  = 0
+            
+            downdown1   = 0
+            downdown2   = 0
+            downdown3   = 0
+            downdown4   = 0
+            downdown5   = 0
+            downdown6   = 0
+            downdown7   = 0
+            downdown8   = 0
+            downdown9   = 0
+            downdown10   = 0
+            downdown11   = 0
+            downdown12   = 0
+            downdown13   = 0
+            
+            updown1   = 0
+            updown2   = 0
+            updown3   = 0
+            updown4   = 0
+            updown5   = 0
+            updown6   = 0
+            updown7   = 0
+            updown8   = 0
+            updown9   = 0
+            updown10   = 0
+            updown11   = 0
+            updown12   = 0
+            updown13   = 0
+            
+            pressure1   = 0
+            pressure2   = 0
+            pressure3   = 0
+            pressure4   = 0
+            pressure5   = 0
+            pressure6   = 0
+            pressure7   = 0
+            pressure8   = 0
+            pressure9   = 0
+            pressure10   = 0
+            pressure11   = 0
+            pressure12   = 0
+            pressure13   = 0
+            pressure14   = 0
+            
+            fingerarea1   = 0
+            fingerarea2   = 0
+            fingerarea3   = 0
+            fingerarea4   = 0
+            fingerarea5   = 0
+            fingerarea6   = 0
+            fingerarea7   = 0
+            fingerarea8   = 0
+            fingerarea9   = 0
+            fingerarea10   = 0
+            fingerarea11   = 0
+            fingerarea12   = 0
+            fingerarea13   = 0
+            fingerarea14   = 0
+            
+            meanholdtime  = 0
+            meanpressure  = 0
+            meanfingerarea  = 0
+            
+            dataArray = []
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+    }
+    
+    @IBAction func showAlert(correct: Bool) {
+        if(correct == false) {
+            let alertController = UIAlertController(title: "Password Incorrect!", message: "Try again.", preferredStyle: .alert)
+        
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+        
+            present(alertController, animated: true, completion: nil)
+        
+            _ = { (action:UIAlertAction!) -> Void in
+                let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+                alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertMessage, animated: true, completion: nil)
+            }
+        }
+        else {
+            let alertController = UIAlertController(title: "Correct!", message: "Submittted.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+            _ = { (action:UIAlertAction!) -> Void in
+                let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+                alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertMessage, animated: true, completion: nil)
+            }
+        }
     }
 }
 

@@ -14,6 +14,7 @@
 		3D0E600B1DDC035500681580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0E60091DDC035500681580 /* LaunchScreen.storyboard */; };
 		3D0E60161DDC035500681580 /* iProfileAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E60151DDC035500681580 /* iProfileAppTests.swift */; };
 		3D0E60211DDC035600681580 /* iProfileAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E60201DDC035600681580 /* iProfileAppUITests.swift */; };
+		A899A3751DF0743B0048315B /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899A3741DF0743B0048315B /* secondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D0E601C1DDC035600681580 /* iProfileAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProfileAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0E60201DDC035600681580 /* iProfileAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProfileAppUITests.swift; sourceTree = "<group>"; };
 		3D0E60221DDC035600681580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A899A3741DF0743B0048315B /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3D0E60001DDC035500681580 /* AppDelegate.swift */,
 				3D0E60021DDC035500681580 /* ViewController.swift */,
+				A899A3741DF0743B0048315B /* secondViewController.swift */,
 				3D0E60041DDC035500681580 /* Main.storyboard */,
 				3D0E60071DDC035500681580 /* Assets.xcassets */,
 				3D0E60091DDC035500681580 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D0E60031DDC035500681580 /* ViewController.swift in Sources */,
+				A899A3751DF0743B0048315B /* secondViewController.swift in Sources */,
 				3D0E60011DDC035500681580 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
