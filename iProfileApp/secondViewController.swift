@@ -8,6 +8,7 @@
 
 import UIKit
 
+//log in screen
 class secondViewController: UIViewController {
 
     
@@ -40,6 +41,9 @@ class secondViewController: UIViewController {
             showAlert()
         }
     }
+    //check if there is a username
+    //print error if none
+    //proceed to password screen if text provided
     @IBAction func showAlert() {
         let alertController = UIAlertController(title: "Error!", message: "Please enter a username.", preferredStyle: .alert)
         

@@ -326,7 +326,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="lButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU8-nb-AD7"/>
+                                                                            <action selector="lButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mtf-jn-RBY"/>
                                                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZK-vB-ldE"/>
                                                                             <action selector="release:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3w7-fq-waz"/>
                                                                         </connections>

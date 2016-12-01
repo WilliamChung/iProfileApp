@@ -8,10 +8,14 @@
 
 import UIKit
 
+//main screen
 class ViewController: UIViewController {
     
+    //instantiate all variables
+    //username coming in
     var toPass: String!
     
+    //buttons
     @IBOutlet weak var qButton: UIButton!
     @IBOutlet weak var wButton: UIButton!
     @IBOutlet weak var eButton: UIButton!
@@ -43,11 +47,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var nButton: UIButton!
     @IBOutlet weak var mButton: UIButton!
     
-    @IBAction func lButton(_ sender: UIButton) {
-    }
-    
-    @IBOutlet weak var labelPassedData: UILabel!
-    
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBOutlet weak var numbersButton: UIButton!
@@ -56,16 +55,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var returnButton: UIButton!
     
+    
+    @IBAction func lButton(_ sender: Any) {
+    }
+    
+    //textfields
     @IBOutlet weak var keyTextField: UITextField!
  
     @IBOutlet weak var timeStampField: UITextField!
     
     @IBOutlet weak var locationTextField: UITextField!
     
+    @IBOutlet weak var labelPassedData: UILabel!
+    
+    //create a timestamp
     var tStamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
     
+    //attributes to collect
     var oldDownTime: Double = 0
     var currentDownTime: Double = 0
     var upTime: Double = 0
@@ -74,16 +82,20 @@ class ViewController: UIViewController {
     var upDownTime: Double = 0
     var meanHoldTime: Double = 0
     
+    //button states
     var shiftVisible: Bool = true
     var shiftClicked: Bool = false
     var specialNumVisible: Bool = true
     var specialTwoVisible: Bool = false
     var specialNumClicked: Bool = false
     
+    //password
     var keyString: String = ""
     
+    //touch point X and Y
     var location: CGPoint?
     
+    //attribute containers
     var holdtime1   = 0
     var holdtime2   = 0
     var holdtime3   = 0
@@ -160,15 +172,21 @@ class ViewController: UIViewController {
     var meanholdtime  = 0
     var meanpressure  = 0
     var meanfingerarea  = 0
+    
+    //userid
     var user_id = ""
     
+    //array to store attributes
     var dataArray: [Int] = []
     
+    //for alert box
     enum UIAlertControllerStyle : Int {
         case ActionSheet
         case Alert
     }
     
+    
+    //pass in username from first view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -176,7 +194,7 @@ class ViewController: UIViewController {
         
     }
     
-    
+    //wait for touch event
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
@@ -199,10 +217,10 @@ class ViewController: UIViewController {
         super.touchesBegan(touches , with: event)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //round the buttons
         qButton.layer.cornerRadius = 5
         wButton.layer.cornerRadius = 5
         eButton.layer.cornerRadius = 5
@@ -244,7 +262,7 @@ class ViewController: UIViewController {
 
     }
     
-    
+    //remove the last character typed when delete is pressed
     @IBAction func deletePushed(_ sender: UIButton) {
         if(keyString == "") {} //remove only if there is something there
         else {
@@ -253,14 +271,16 @@ class ViewController: UIViewController {
         }
     }
     
+    //add space
     @IBAction func spacePushed(_ sender: UIButton) {
         keyString += " "
         keyTextField.text = keyString
     }
     
-    
+    //toggle letters to upper and lower case
     @IBAction func shiftPushed(_ sender: UIButton) {
-
+        
+        //uppercase
         if(shiftVisible == true && shiftClicked == false){
             qButton.setTitle("Q", for: .normal)
             wButton.setTitle("W", for: .normal)
@@ -291,6 +311,7 @@ class ViewController: UIViewController {
             
             shiftClicked = true
         }
+        //lowercase
         else {
             qButton.setTitle("q", for: .normal)
             wButton.setTitle("w", for: .normal)
@@ -322,6 +343,7 @@ class ViewController: UIViewController {
             shiftClicked = false
         }
         
+        //specialnumber button "123" clicked
         if(specialTwoVisible == true && specialNumClicked == false) {
             qButton.setTitle("1", for: .normal)
             wButton.setTitle("2", for: .normal)
@@ -358,7 +380,8 @@ class ViewController: UIViewController {
             shiftVisible = false
 
         }
-
+        
+        //specialnumbertwo clicked "#+="
         else if(specialTwoVisible == true && specialNumClicked == true) {
             qButton.setTitle("[", for: .normal)
             wButton.setTitle("]", for: .normal)
@@ -397,6 +420,7 @@ class ViewController: UIViewController {
         
     }
     
+    //toggle from numbers back to letters
     @IBAction func specialNumPushed(_ sender: UIButton) {
         if(specialNumVisible == true){
             qButton.setTitle("1", for: .normal)
@@ -480,6 +504,7 @@ class ViewController: UIViewController {
         print("CurrentDown: \(currentDownTime)")
         print("DownDifference: \(downTimeDifference)")
         
+        //when in uppercase, change back to lowercase after 1 letter typed
         if(shiftClicked == true) {
             keyString += sender.currentTitle!
             keyTextField.text = keyString
@@ -528,7 +553,7 @@ class ViewController: UIViewController {
         
     }
     
-    
+    //timestamp for release
     @IBAction func release(_ sender: UIButton) {
         
         upTime = Double (tStamp)!
@@ -541,16 +566,17 @@ class ViewController: UIViewController {
         //downUpTime.text = String (upTimeDifference)
     }
     
-    
+    //return is pressed, submit form
     @IBAction func submitToForm(_ sender: UIButton) {
         
+        //check if the text matches password
         if(keyTextField.text == ".tie5Roanl") {
             let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
                 .appendingPathComponent("data.txt")
             
             if let outputStream = OutputStream(url: fileURL, append: true) {
                 outputStream.open()
-                let text = "write this\n"
+                let text = "the array goes here\n"
                 print("Saved to: \(fileURL)")
                 let bytesWritten = outputStream.write(text)
                 
@@ -558,7 +584,9 @@ class ViewController: UIViewController {
                     print("write failure")
                 }
                 outputStream.close()
+                //correct alert
                 showAlert(correct: true)
+                //reset textbox
                 keyTextField.text = ""
             }
                 
@@ -568,7 +596,9 @@ class ViewController: UIViewController {
         }
         
         else {
+            //error alert
             showAlert(correct: false);
+            //reset textbox
             keyTextField.text = ""
             
             //reset all values
@@ -659,7 +689,10 @@ class ViewController: UIViewController {
         
     }
     
+    //function to show alert
     @IBAction func showAlert(correct: Bool) {
+        
+        //pass doesnt match
         if(correct == false) {
             let alertController = UIAlertController(title: "Password Incorrect!", message: "Try again.", preferredStyle: .alert)
         
@@ -674,6 +707,8 @@ class ViewController: UIViewController {
                 self.present(alertMessage, animated: true, completion: nil)
             }
         }
+            
+        //pass matches
         else {
             let alertController = UIAlertController(title: "Correct!", message: "Submitted.", preferredStyle: .alert)
             
@@ -691,6 +726,7 @@ class ViewController: UIViewController {
     }
 }
 
+    //send text to file on local device
     extension OutputStream {
         
         /// Write `String` to `OutputStream`
